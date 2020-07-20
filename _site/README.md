@@ -18,4 +18,4 @@ Workplace4u is [MIT licensed](./LICENSE?raw=true) and is available for public us
 
 **Version 1.0** *Current* (2020)
 
-![ScreenShot](./screenshots/v2_1.png)
+![ScreenShot](./screenshots/1.png)

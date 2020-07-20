@@ -290,7 +290,8 @@ header {
         }
 
         &.selected {
-            background: rgba(0, 0, 0, .02);
+            background: rgba(0, 0, 0, .06);
+            border-bottom: 2px solid black;
         }
 
         span {
@@ -306,6 +307,17 @@ header {
             }
             @media(min-width:992px){
                 font-size: 12px;
+            }
+        }
+
+        span.click-here {
+            color: #5b5b5b;
+            text-decoration: underline;
+        }
+
+        &.selected {
+            span.click-here {
+                display: none;
             }
         }
 

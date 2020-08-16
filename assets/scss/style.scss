@@ -369,6 +369,14 @@ header {
 
         @media(max-width:767px){
             height: 750px;
+
+            @media(max-width:600px){
+                height: 850px;
+
+                @media(max-width:400px){
+                    height: 950px;
+                }
+            }
         }
     }
 
@@ -405,6 +413,14 @@ header {
 
             @media(max-width:767px){
                 height: 350px;
+
+                @media(max-width:600px){
+                    height: 450px;
+
+                    @media(max-width:400px){
+                        height: 550px;
+                    }
+                }
             }
 
             p {

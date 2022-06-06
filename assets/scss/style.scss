@@ -106,7 +106,7 @@ header {
     height: 100%;
     background-size: cover;
     background-position: 50% 50%;
-    background-image: url('/assets/img/main.jpg');
+    background-image: url('/assets/img/main_v2.jpg');
 }
 
 .banner {
@@ -259,7 +259,7 @@ header {
     }
 
     .tab {
-        padding-right: 3vw;
+        // padding-right: 3vw;
         padding-top: 10px;
         padding-bottom: 10px;
         text-align: right;
@@ -269,7 +269,7 @@ header {
         @include transition(.13s all ease-in-out);
 
         @media(min-width:768px){
-            padding-right: 25px;
+            // padding-right: 25px;
             margin-top: 14px;
             margin-bottom: 14px;
         }
@@ -287,6 +287,11 @@ header {
 
         .tab-wrap {
             @include transition(.13s all ease-in-out);
+
+            @media(max-width:767px){
+                margin-left: -12px;
+                margin-right: -12px;
+            }
         }
 
         &.selected {
@@ -295,11 +300,11 @@ header {
         }
 
         span {
-            color: #42A23C;
+            color: #E31212;
             font-size: 1.5vw;
 
             &.unavailable {
-                color: #E31212;
+                color: #42A23C;
             }
 
             @media(min-width:768px){
@@ -321,31 +326,38 @@ header {
             }
         }
 
+        @media(max-width:767px){
+            span.click-here {
+                display: none;
+            }
+        }
+
         p {
             margin: 0;
-            margin-top: -1px;
+            margin-top: 2px;
             font-family: 'bunt';
             color: #4c4c4c;
-            font-size: 3.5vw;
+            font-size: 3vw;
+            line-height: 1.2em;
+            font-weight: bold;
 
             @media(min-width:768px){
                 font-size: 18px;
             }
             @media(min-width:992px){
-                font-size: 26px;
-                margin-top: -3px;
+                font-size: 25px;
+                margin-top: 3px;
             }
             @media(min-width:1200px){
                 font-size: 28px;
             }
         }
 
-        h5 {
+        h4 {
             margin: 0;
             font-weight: 400;
             color: #656565;
-            font-size: 1.9vw;
-            margin-top: -.9vw;
+            font-size: 1.5vw;
 
             @media(min-width:768px){
                 font-size: 12px;
@@ -353,8 +365,27 @@ header {
             }
 
             @media(min-width:992px){
-                font-size: 15px;
-                margin-top: -8px;
+                font-size: 14px;
+                margin-top: -2px;
+                margin-bottom: 4px;
+            }
+        }
+
+        h5 {
+            margin: 0;
+            font-weight: 400;
+            color: #656565;
+            font-size: 2.2vw;
+            margin-top: 0.2vw;
+
+            @media(min-width:768px){
+                font-size: 14px;
+                margin-top: 0px;
+            }
+
+            @media(min-width:992px){
+                font-size: 22px;
+                margin-top: -2px;
             }
         }
 
@@ -378,6 +409,12 @@ header {
                 }
             }
         }
+
+        .ideal-image-slider {
+            @media(min-width:1200px){
+                height: 512px !important;
+            }
+        }
     }
 
     .slider-wrap {
@@ -397,6 +434,27 @@ header {
         &.selected {
             visibility: visible;
             opacity: 1;
+        }
+
+        .iis-slide {
+            text-indent: 0px; // override the default plugin
+            text-decoration: none !important;
+        }
+
+        a.iis-slide::after {
+            bottom: 10px;
+            right: 10px;
+            content: "" attr(data-caption) "";
+            background: rgba(255,255,255,0.8);
+            display: block;
+            color: #333333;
+            padding: 2px 7px;
+            font-size: 16px;
+            text-align: center;
+
+            @media(min-width:1200px){
+                font-size: 18px;
+            }
         }
 
         &.slide-614, &.slide-616 {
@@ -489,6 +547,24 @@ header {
     margin-top: 20px;
     @extend .card;
 
+    p {
+        font-size: 18px;
+
+        @media(max-width:767px){
+            font-size: 16px;
+        }
+    }
+
+    li {
+        font-size: 16px;
+        margin-top: 5px;
+
+        @media(max-width:767px){
+            font-size: 14px;
+        }
+    }
+
+
     h3 {
         background: rgba(63,124,172,0.08);
         margin: 0;
@@ -512,6 +588,10 @@ header {
             font-size: 28px;
             padding: 15px 0;
         }
+    }
+
+    .building-features {
+        padding: 4px 4px 12px;
     }
 
     .images {
@@ -558,6 +638,16 @@ header {
     @media(max-width:767px){
         margin-top: 10px
     }
+}
+
+// For 7 column grids
+// https://stackoverflow.com/questions/21955088/7-equal-columns-in-bootstrap
+.seven-cols .col-xs-1,
+.seven-cols .col-md-1,
+.seven-cols .col-sm-1,
+.seven-cols .col-lg-1  {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
 }
 
 footer {

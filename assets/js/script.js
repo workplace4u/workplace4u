@@ -1,32 +1,18 @@
 (function() {
     // Image Gallery Initialization
-    var slider612 = new IdealImageSlider.Slider({
-        'selector': '#slider-612',
-        'effect': 'slide',
-        'transitionDuration': 600,
-        'interval': 2000
-    });
-    slider612.start();
+    var sliderList = [100, 202, 300];
+    var sliders = {}
+    sliderList.forEach((sliderId) => {
+        sliders[sliderId] = new IdealImageSlider.Slider({
+            'selector': '#slider-' + sliderId,
+            'effect': 'slide',
+            'transitionDuration': 600,
 
-    var slider614 = new IdealImageSlider.Slider({
-        'selector': '#slider-614',
-        'effect': 'slide',
-        'transitionDuration': 600,
-        'interval': 2000
+            'interval': 2000
+        });
+        // sliders[sliderId].start();
     });
 
-    var slider616 = new IdealImageSlider.Slider({
-        'selector': '#slider-616',
-        'effect': 'slide',
-        'transitionDuration': 600,
-        'interval': 2000
-    });
-
-    var sliders = {
-        '612': slider612,
-        '614': slider614,
-        '616': slider616
-    }
 
     // Tab Initialization
     $(document).on('click', '.tab', function() {
@@ -50,8 +36,9 @@
     });
 
     // Thumbnail Gallery Initialization
-    initPhotoSwipeFromDOM('.gallery-612');
-    initPhotoSwipeFromDOM('.gallery-614');
-    initPhotoSwipeFromDOM('.gallery-616');
+    sliderList.forEach((sliderId) => {
+        initPhotoSwipeFromDOM('.gallery-' + sliderId);
+    });
+
     initPhotoSwipeFromDOM('.gallery-property');
 })();

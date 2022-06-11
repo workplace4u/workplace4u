@@ -7,11 +7,11 @@
             'selector': '#slider-' + sliderId,
             'effect': 'slide',
             'transitionDuration': 600,
-
             'interval': 2000
         });
-        // sliders[sliderId].start();
     });
+
+    sliders[sliderList[0]].start()
 
 
     // Tab Initialization

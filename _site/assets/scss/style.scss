@@ -191,6 +191,11 @@ header {
         padding: 0;
         position: static;
 
+        @media(max-width:767px){
+            border-top: 16px solid #BCCD8A;
+            border-bottom: 16px solid #BCCD8A;
+        }
+
         &.guarded:after {
             content: "";
             display: block;
@@ -252,6 +257,10 @@ header {
 .second-card {
     margin-top: 20px;
     @extend .card;
+
+    @media(max-width:767px){
+        margin-top: 0 !important;
+    }
 
     .tabs {
         background: rgba(63,124,172,0.08);
@@ -390,7 +399,8 @@ header {
         }
 
         &:not(.last) {
-            border-right: 1px solid #E0E4E8;
+            // border-right: 1px solid #E0E4E8;
+            border-right: 1px solid #D0D4D8;
         }
     }
 

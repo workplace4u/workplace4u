@@ -301,6 +301,14 @@ header {
                 margin-left: -12px;
                 margin-right: -12px;
             }
+
+            &.first {
+                padding-bottom: 20px;
+
+                @media(min-width:768px){
+                    padding-bottom: 30px;
+                }
+            }
         }
 
         &.selected {
@@ -310,17 +318,18 @@ header {
 
         span {
             color: #E31212;
-            font-size: 2.3vw;
+            font-size: 3.5vw;
 
             &.unavailable {
                 color: #42A23C;
+                font-weight: bold;
             }
 
             @media(min-width:768px){
-                font-size: 9px;
+                font-size: 17px;
             }
             @media(min-width:992px){
-                font-size: 12px;
+                font-size: 21px;
             }
         }
 

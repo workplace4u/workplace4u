@@ -1,6 +1,6 @@
 (function() {
     // Image Gallery Initialization
-    var sliderList = [100, 202, 300];
+    var sliderList = [/* 100, */ 202, 300];
     var sliders = {}
     sliderList.forEach((sliderId) => {
         sliders[sliderId] = new IdealImageSlider.Slider({

@@ -11,7 +11,7 @@
         });
     });
 
-    sliders[sliderList[0]].start()
+    sliders[sliderList[1]].start()
 
 
     // Tab Initialization
